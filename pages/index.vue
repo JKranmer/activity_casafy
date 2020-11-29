@@ -1,35 +1,34 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        activity_casafy
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="grid grid-rows">
+    <div class="grid xl:grid-cols-5 grid-cols-1 m-5 gap-4">
+      <div class="xl:col-span-4 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+        <div class="bg-yellow-500 md:col-span-2 xl:col-span-1">
+          <img
+            class="rounded-t-sm"
+            src="https://picsum.photos/seed/picsum/500/700"
+            alt="logo_1"
+          />
+        </div>
+        <div class="bg-yellow-500 xl:col-span-3 md:col-span-2">
+          <iframe
+            width="100%"
+            height="500"
+            src="https://www.youtube.com/embed/fZl6ufxmAqI"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
+      <Crowding />
     </div>
+    <Sponsors class="mt-5" />
   </div>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style>
 /* Sample `apply` at-rules with Tailwind CSS
@@ -47,16 +46,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
