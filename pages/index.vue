@@ -1,28 +1,53 @@
 <template>
   <div class="grid grid-rows">
     <div class="grid xl:grid-cols-5 grid-cols-1 m-5 gap-4">
-      <div class="xl:col-span-4 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
-        <div class="bg-yellow-500 md:col-span-2 xl:col-span-1">
+      <div
+        class="xl:col-span-4 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4"
+      >
+        <div class="md:col-span-2 xl:col-span-1">
           <img
-            class="rounded-t-sm"
-            src="https://picsum.photos/seed/picsum/500/700"
+            class="rounded-t-sm hidden xl:block 2xl:hidden"
+            src="https://picsum.photos/id/1033/700/1150"
+            alt="logo_1"
+          />
+          <img
+            class="rounded-t-sm block xl:hidden"
+            src="https://picsum.photos/id/1033/1300/500"
             alt="logo_1"
           />
         </div>
-        <div class="bg-yellow-500 xl:col-span-3 md:col-span-2">
+        <div class="xl:col-span-3 md:col-span-2">
           <iframe
             width="100%"
-            height="500"
+            height="100%"
+            style="min-height:200px;"
             src="https://www.youtube.com/embed/fZl6ufxmAqI"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
         </div>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <!-- <Card  v-for="card in cards" :key="card.title"/> -->
+        <div
+          v-for="card in cards"
+          :key="card.title"
+          class="bg-gray-100 rounded shadow-lg m-5"
+        >
+          <img class="rounded-t-sm" :src="card.img" :alt="card.title" />
+          <p class="p-4">
+            <span class="font-bold">{{ card.title }}</span
+            ><br />
+            {{ card.text }}
+          </p>
+          <a
+            :href="card.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button--green mb-4 "
+          >
+            More
+          </a>
+        </div>
       </div>
       <Crowding />
     </div>
@@ -67,3 +92,52 @@
   padding-top: 15px;
 }
 </style>
+
+<script>
+export default {
+  head: {
+    title: 'Home page',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description'
+      }
+    ]
+  },
+  data () {
+    return {
+      cards: [
+        {
+          title: 'Allan Frederic',
+          img: 'https://picsum.photos/id/1015/500/200',
+          text:
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+          link: '$123'
+        },
+        {
+          title: 'David Smith',
+          img: 'https://picsum.photos/id/1002/500/200',
+          text:
+            'It is a long established fact that a reader will be distracted by the readable will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, ',
+          link: '$123'
+        },
+        {
+          title: 'Issac Polo',
+          img: 'https://picsum.photos/id/1/500/200',
+          text:
+            'Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their  for lorem ipsum will uncover many web sites still infancy.',
+          link: '$123'
+        },
+        {
+          title: 'Sarah Walkers',
+          img: 'https://picsum.photos/id/103/500/200',
+          text:
+            'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don t look even slightly believable. Humour, or randomised words which don t . ',
+          link: '$123'
+        }
+      ]
+    }
+  }
+}
+</script>
