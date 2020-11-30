@@ -9,11 +9,11 @@ export default {
     return {
       sponsors:
         [
-          { name: 'Nike', logo: 'https://logospng.org/download/nike/logo-nike-1536.png', link: '/sponsor1', class: 'self-center', styleImg: 'max-height:100px; margin:auto; filter: invert(1) ' },
-          { name: 'Adidas', logo: 'https://i.pinimg.com/originals/fe/52/81/fe52814e2f2de9cd68c5c048b7d32e2c.png', link: '/sponsor2', class: 'self-center max-h-2', styleImg: 'max-height:100px; margin:auto; filter: invert(1)' },
-          { name: 'Lupo', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Lupo_logo.svg/1280px-Lupo_logo.svg.png', link: '/sponsor4', class: 'self-center', styleImg: 'max-height:100px; margin:auto; filter: invert(1); ' },
-          { name: 'Puma', logo: 'https://i.pinimg.com/originals/d6/2e/e2/d62ee237e901fb9d16b7714b9bd165bb.png', link: '/sponsor3', class: 'self-center', styleImg: 'max-height:100px; margin:auto; filter: invert(1) ' },
-          { name: 'Ralpgh Lauren', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Ralph-Lauren-Symbol.png', link: '/sponsor5', class: 'hidden sm:block self-center', styleImg: 'max-height:100px; margin:auto; filter: invert(1) ' }
+          { name: 'Nike', logo: '/img/nike.png', link: '/nike', class: 'self-center', styleImg: 'max-height:100px; margin:auto; filter: invert(1) ' },
+          { name: 'Adidas', logo: '/img/adidas.png', link: '/adidas', class: 'self-center max-h-2', styleImg: 'max-height:100px; margin:auto; filter: invert(1)' },
+          { name: 'Lupo', logo: '/img/lupo.png', link: '/lupo', class: 'self-center', styleImg: 'max-height:100px; margin:auto; filter: invert(1); ' },
+          { name: 'Puma', logo: '/img/puma.png', link: '/puma', class: 'self-center', styleImg: 'max-height:100px; margin:auto; filter: invert(1) ' },
+          { name: 'Ralpgh Lauren', logo: '/img/Ralph-Lauren-Symbol.png', link: '/ralph', class: 'hidden sm:block self-center', styleImg: 'max-height:100px; margin:auto; filter: invert(1) ' }
         ],
       title: 'TESTE'
     }
